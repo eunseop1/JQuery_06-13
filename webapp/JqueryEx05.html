@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery를 이용한 객체 확장</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("h1")
+		.css("backgroundColor","orange")
+		.add("h2") //추가선택(h태그를 블록태그)
+		.css('float','left');//블록태그(무조건 줄이 바뀜)를 인라인(옆으로 붙음)으로 바꿀때 쓰는 방법
+	});
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<!-- (h1{나는 큰제목 $$}+h2{나는 작은 제목 $$})*4 -->
+
+	 <h1>나는 큰제목 01</h1>
+	 <h2>나는 작은 제목 01</h2>
+	 <h1>나는 큰제목 02</h1>
+	 <h2>나는 작은 제목 02</h2>
+	 <h1>나는 큰제목 03</h1>
+	 <h2>나는 작은 제목 03</h2>
+	 <h1>나는 큰제목 04</h1>
+	 <h2>나는 작은 제목 04</h2>
+</body>
+</html>

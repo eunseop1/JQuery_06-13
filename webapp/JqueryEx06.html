@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery를 이용한 객체 확장</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("h2").each(function(){//h2태그를 반복
+			if($(this).is('.select')){//is(선택자) : 선택자를 가지고 있는지를 판단한다
+				//select를 가지고 있느냐?
+				$(this).css('color','red');//그렇다면 빨갛게 해라
+			}
+		});
+	});
+</script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<!-- h2[class='select']{나는 제목입니다. $$$}*3 -->
+	<h2 class="select">나는 제목입니다. 001</h2>
+	<h2>나는 제목입니다. 002</h2>
+	<h2 class="select">나는 제목입니다. 003</h2>
+</body>
+</html>
